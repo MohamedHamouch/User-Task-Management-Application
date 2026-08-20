@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         $admin = User::firstOrCreate(
             ['email' => 'admin@example.com'],
             [
-                'name' => 'System Admin',
+                'name' => 'Mohamed Admin',
                 'password' => Hash::make('password'),
                 'role' => 'admin',
             ]
@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
         $client1 = User::firstOrCreate(
             ['email' => 'client1@example.com'],
             [
-                'name' => 'Alice Client (Acme Corp)',
+                'name' => 'Fatima Client (Acme Corp)',
                 'password' => Hash::make('password'),
                 'role' => 'client',
             ]
@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
         $client2 = User::firstOrCreate(
             ['email' => 'client2@example.com'],
             [
-                'name' => 'Bob Client (Globex Inc)',
+                'name' => 'Omar Client (Globex Inc)',
                 'password' => Hash::make('password'),
                 'role' => 'client',
             ]
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
         $worker1 = User::firstOrCreate(
             ['email' => 'worker1@example.com'],
             [
-                'name' => 'Charlie Worker',
+                'name' => 'Karim Worker',
                 'password' => Hash::make('password'),
                 'role' => 'worker',
             ]
@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
         $worker2 = User::firstOrCreate(
             ['email' => 'worker2@example.com'],
             [
-                'name' => 'Dana Worker',
+                'name' => 'Sara Worker',
                 'password' => Hash::make('password'),
                 'role' => 'worker',
             ]
