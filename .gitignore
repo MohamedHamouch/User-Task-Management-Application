@@ -1,0 +1,13 @@
+# IDE and editors
+.idea/
+.vscode/
+.cursor/
+.zed/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker overrides (keep docker-compose.yml, ignore local overrides)
+docker-compose.override.yml
