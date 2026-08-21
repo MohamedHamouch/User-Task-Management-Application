@@ -272,26 +272,50 @@ export default function AdminDashboard() {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex items-center p-1 bg-zinc-100 dark:bg-zinc-800 rounded-lg border border-zinc-200 dark:border-zinc-700 self-start sm:self-auto">
+        <div className="flex items-center gap-1.5 p-1.5 bg-zinc-200/80 dark:bg-zinc-800 rounded-xl border border-zinc-300/80 dark:border-zinc-700 shadow-xs self-start sm:self-auto">
           <button
             onClick={() => setActiveTab("tasks")}
-            className={`px-3.5 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${
+            className={`flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all cursor-pointer ${
               activeTab === "tasks"
-                ? "bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-2xs"
-                : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
+                ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-sm"
+                : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-200/60 dark:hover:bg-zinc-700/50"
             }`}
           >
-            Tasks ({tasks.length})
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+            <span>Tasks</span>
+            <span
+              className={`ml-0.5 px-2 py-0.5 text-[11px] font-bold rounded-full ${
+                activeTab === "tasks"
+                  ? "bg-zinc-800 text-zinc-100 dark:bg-zinc-200 dark:text-zinc-900"
+                  : "bg-zinc-300 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300"
+              }`}
+            >
+              {tasks.length}
+            </span>
           </button>
           <button
             onClick={() => setActiveTab("users")}
-            className={`px-3.5 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${
+            className={`flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all cursor-pointer ${
               activeTab === "users"
-                ? "bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-2xs"
-                : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
+                ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-sm"
+                : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-200/60 dark:hover:bg-zinc-700/50"
             }`}
           >
-            Users ({users.length})
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <span>Users</span>
+            <span
+              className={`ml-0.5 px-2 py-0.5 text-[11px] font-bold rounded-full ${
+                activeTab === "users"
+                  ? "bg-zinc-800 text-zinc-100 dark:bg-zinc-200 dark:text-zinc-900"
+                  : "bg-zinc-300 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300"
+              }`}
+            >
+              {users.length}
+            </span>
           </button>
         </div>
       </div>
