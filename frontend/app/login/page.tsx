@@ -141,8 +141,11 @@ export default function LoginPage() {
           </form>
 
           <div className="mt-6 pt-6 border-t border-zinc-200 dark:border-zinc-800">
-            <div className="text-xs font-semibold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 mb-3">
-              One-Click Demo Accounts
+            <div className="text-xs font-semibold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 mb-3 flex items-center justify-between">
+              <span>Instant Login</span>
+              <span className="text-[11px] font-normal lowercase tracking-normal text-zinc-600 dark:text-zinc-400 italic">
+                (to make your life easier)
+              </span>
             </div>
             <div className="space-y-2">
               {DEMO_ACCOUNTS.map((acc) => (

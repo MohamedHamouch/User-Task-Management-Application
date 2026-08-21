@@ -17,18 +17,13 @@ export default function Navbar() {
   return (
     <header className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900 sticky top-0 z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-lg bg-zinc-900 dark:bg-white flex items-center justify-center text-white dark:text-zinc-900 font-bold text-sm tracking-wide">
+        <div className="flex items-center gap-2.5">
+          <div className="h-6 w-6 rounded-md bg-zinc-900 dark:bg-white flex items-center justify-center text-white dark:text-zinc-900 font-bold text-[11px] tracking-tight">
             TM
           </div>
-          <div>
-            <span className="font-semibold text-zinc-900 dark:text-white tracking-tight text-base">
-              TaskFlow
-            </span>
-            <span className="hidden sm:inline-block ml-2 text-xs text-zinc-600 dark:text-zinc-400">
-              Management App
-            </span>
-          </div>
+          <span className="font-semibold text-zinc-900 dark:text-white tracking-tight text-base">
+            Task Management
+          </span>
         </div>
 
         <div className="flex items-center gap-4">
