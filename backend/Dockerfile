@@ -1,4 +1,4 @@
-FROM php:8.3-fpm-alpine
+FROM php:8.4-fpm-alpine
 
 # Install system dependencies and PHP extensions
 RUN apk add --no-cache \
@@ -17,8 +17,9 @@ WORKDIR /var/www/html
 COPY composer.json composer.lock ./
 RUN composer install --no-dev --no-scripts --no-autoloader --no-interaction
 
-# Copy remaining application files
+# Copy remaining application files and ensure .env exists for artisan commands
 COPY . .
+RUN cp .env.example .env
 
 # Run composer post-install
 RUN composer dump-autoload --optimize

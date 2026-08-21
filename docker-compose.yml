@@ -7,7 +7,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: task_management
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
@@ -51,7 +51,8 @@ services:
     volumes:
       - backend_storage:/var/www/html/storage
     command: >
-      sh -c "php artisan key:generate --force &&
+      sh -c "cp -n .env.example .env 2>/dev/null || true &&
+             php artisan key:generate --force &&
              php artisan migrate --force &&
              php artisan db:seed --force &&
              supervisord -c /etc/supervisord.conf"
